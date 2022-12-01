@@ -1,14 +1,16 @@
-import { input } from "./input.mjs";
+import { readFile } from 'fs/promises';
 
-const totals = input.split("\n\n");
-let highest = 0;
+const input = await readFile("day-1/input.txt", 'utf-8');
 
-for (const values of totals) {
-  const split = values.split("\n").reduce((prev, next) => prev + Number(next), 0);
+const totalPerElf = input.split("\n\n");
+let highestValue = 0;
 
-  if (split > highest) {
-    highest = split;
+for (const value of totalPerElf) {
+  const currentElfValue = value.split("\n").reduce((prev, next) => prev + Number(next), 0);
+
+  if (currentElfValue > highestValue) {
+    highestValue = currentElfValue;
   }
 }
 
-console.log(highest);
+console.log(highestValue);

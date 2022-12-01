@@ -1,4 +1,6 @@
-import { input } from "./input.mjs";
+import { readFile } from 'fs/promises';
+
+const input = await readFile("day-1/input.txt", 'utf-8');
 
 /**
  * @param value {string}
