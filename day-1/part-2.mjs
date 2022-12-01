@@ -1,14 +1,14 @@
-import { readFile } from 'fs/promises';
+import { readFile } from "fs/promises";
 
-const input = await readFile("day-1/input.txt", 'utf-8');
+const input = await readFile("day-1/input.txt", "utf-8");
 
 /**
  * @param value {string}
  * @returns number
  */
 const splitAndCountUp = (value) => {
-  return value.split("\n").reduce((prev, next) => prev + Number(next), 0)
-}
+  return value.split("\n").reduce((prev, next) => prev + Number(next), 0);
+};
 
 const totalPerElf = input.split("\n\n");
 
