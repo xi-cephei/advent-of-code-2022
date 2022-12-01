@@ -1,6 +1,6 @@
-import { readFile } from "fs/promises";
+import { getPuzzleInput } from "../utilities/getPuzzleInput.mjs";
 
-const input = await readFile("day-1/input.txt", "utf-8");
+const input = await getPuzzleInput(import.meta.url);
 
 /**
  * @param value {string}
