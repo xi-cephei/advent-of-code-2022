@@ -1,4 +1,4 @@
 # AdventOfCode 2022
 
-## To see the results:
-`$ node day-[x]/part-[x].mjs`
+## To see the results
+Run the tests using [Bun](https://bun.sh): `bun run day-{x}/puzzle.ts`.
